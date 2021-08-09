@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+
+    <script defer src="script.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Online Grocery Store and Super Market in Pakistian</title>
+</head>
+<body>
+    <div class="topDiv">
+        <div class='topDiv_Content'>Groceries delivery in Karachi / Mobile phones, Cosmetics, Toys & Electronics nationwide</div>
+        <div class='topDiv_Divider'></div>
+        <div class='topDiv_Nav'>
+            <div class="topDiv_NavLogin">Login</div>
+            <div class="topDiv_NavCustCare">Customer Care</div>
+            <div class="topDiv_NavContact">
+                <ion-icon name="call-outline"></ion-icon> (021) 111 116 278 
+            </div>
+        </div>
+    </div>
+
+    <nav class="nav2 nav2-active">
+        <div class="nav-item">BEAUTY & PERSONAL CARE</div>
+        <div class="nav-item">HOUSEHOLD NEEDS</div>
+        <div class="nav-item">GROCERY & STAPLES</div>
+        <div class="nav-item">FURNISHING & HOME NEEDS</div>
+        <div class="nav-item">BABY KIDS & TOYS</div>
+        <div class="nav-item">PHARMACY</div>
+        <div class="nav-item">MORE</div>
+    </nav>
+
+    <header>
+        <div class="searchSection">
+            <div class="searchSection_heading">Hum<span>Mart</span></div>
+            <div class="searchSection_inputs">
+                <input type="text" class='searchSection_search' placeholder="Search entire store here...">
+                <input type="button" class='btn-search' value="Search">
+            </div>
+            <div class="searchSection_Gif"><img src="Images/Toys_Gif.gif" alt="Toys Gif"></div>
+            <div class="searchSection_Cart">
+                <ion-icon name="cart-outline" class="openCart" size="large" style="color:rgb(12, 185, 12)"></ion-icon>
+                <span class='itemQty'>0</span>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-item">BEAUTY & PERSONAL CARE</div>
+            <div class="nav-item">HOUSEHOLD NEEDS</div>
+            <div class="nav-item">GROCERY & STAPLES</div>
+            <div class="nav-item">FURNISHING & HOME NEEDS</div>
+            <div class="nav-item">BABY KIDS & TOYS</div>
+            <div class="nav-item">PHARMACY</div>
+            <div class="nav-item">MORE</div>
+        </nav>
+
+        <div class="header-ImgGrid">
+            <div class="header-ImgGrid_left">
+                <div><img src="Images/bundle-offers-left-banner-resized.jpg" /></div>
+                <div><img src="Images/test-2-meat.jpg" /></div>
+            </div>
+            <div class="header-ImgGrid_right">
+                <img src="Images/will-be-back-banner.jpg" alt="">
+            </div>
+        </div>
+    </header>
+
+    <div class="cart hideCart">
+        <div class="cart_QtyDiv">My Cart <span class='itemQty'></span> <span class="crossBtn">&#x274c;</span></div>
+        <div class="cardTopDiv">
+            <div class="cart_chargesDiv">
+                <span>Subtotal</span><span class='priceSpan'></span>
+            </div>
+        </div>
+        <div class="cardBottomDiv">
+            <a href="booking.html" class='btn-cart'>Proceed To Checkout</a>
+        </div>
+    </div>
+
+    <section class="Section-info">
+        <div>
+            <p>Same/Next Day Delivery</p>
+            <p>Free delivery on all orders over Rs. 3,000 Rs 100 for orders below Rs. 3,000 Flat Rs 200 for Same Day orders</p>
+        </div>
+        <div>
+            <p>Cash On Delivery</p>
+            <p>You pay when rider comes at your address.</p>
+        </div>
+        <div>
+            <p>Online Support</p>
+            <p>Customer support from 9AM - Midnight (021)111 116 278</p>
+        </div>
+    </section>
+
+    <section class="Section-bundleOffer">
+        <div class="bundleOffer-container">
+            <p>NEW BUNDLE OFFERS</p>
+            <div class="offer-container">
+                <div class="offer-item">
+                    <div class="offer-imgDiv">
+                        <img src="Images/bundleOffer-1.jpg" alt="">
+                    </div>
+                    <p>Super Saver Bundle 6</p>
+                    <div class="btnDiv">
+                        <strike>Rs 195</strike>
+                        Rs <span>120</span>
+                        <a href="#" data-name="Shahi Zeera" class="btn btn-addToCart">ADD TO CART</a>
+                    </div>
+                </div>
+                <div class="offer-item">
+                    <div class="offer-imgDiv">
+                        <img src="Images/bundleOffer-2.jpg" alt="">
+                    </div>
+                    <p>Super Saver Bundle 1</p>
+                    <div class="btnDiv">
+                        <strike>Rs 195</strike>
+                        Rs <span>111</span>
+                        <a href="#" data-name="Chat Masala" class="btn btn-addToCart">ADD TO CART</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Section-categoris">
+        <div>
+            <p>Categories</p>
+            <div class="category-container">
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-1.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Personal Care</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-2.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Home & Kitchen</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-container">
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-3.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Household Needs</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-4.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Noodles, Sauce and Frozen Foods</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-container">
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-5.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Grocery & Staples</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-6.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Breakfast & Dairy</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-container">
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-7.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Furnishing & Home Needs</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-8.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Beverages</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-container">
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-9.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Baby & Kids</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-10.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Pet Care</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-container">
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-11.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Pharmacy</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-12.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Home Service</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-container">
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-13.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Biscuits, Snacks and Chocolates</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-Img">
+                        <img src="Images/category-14.jpg" alt="">
+                    </div>
+                    <div class="category-content">
+                        <p>Meaet & Seafood</p>
+                        <p></p>
+                    </div>
+                    <div class="category-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="Section-about">
+        <div>
+            <p>Online Supermarket, Delivery In Karachi, Pakistan</p>
+            <p>Ever wondered of entering a grocery store and getting an overview of products sections and get to grab the required product from there? The alternate is our search bar of HumMart where you can search from a wide range of categories including grocery and staples, home furnishing, breakfast and dairy, instant foods, biscuits and snacks, beverages, household needs, personal care, home and kitchen, baby products, fruits and vegetables, ice creams and a lot more. Now with online phones and accessories purchase and with easy and timely home delivery all over Pakistan. The online shopping of grocery is a blessing to get the required products over a few clicks. We at HumMart provides our customers with the best deals to get value addition on the purchase of products available online as a bundle offer. If you are in a mood to mingle with friends but you got a grocery list in your pocket, just visit HumMart and order the grocery to get it delivered right at your home while you get yourself entertained with friends. Want to cook your favorite dish, no need to worry for the items to prepare a mouthwatering dish. HumMart offers you ample products to get the ingredients for the dish. We will provide you the products through express delivery within 2 hours. You have the independence to opt out from numerous products as HumMart focuses to bring utmost facilities through its online grocery store and adding value in life of our valued customers. You need to stay at your home, visit hummart.com through your laptop, smartphone or even from phone application.</p>
+        </div>
+    </section>
+
+    <section class="section-blank"></section>
+
+    <footer>
+        <div>
+            <div class="columns">
+                <p>HUMMART</p>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">About us</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Careers</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Sell on HumMart</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Terms & Conditions</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Privacy Policy</span></div>
+            </div>
+            <div class="columns">
+                <p>HELP</p>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">FAQs</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">How to Order</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">How to Pay</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Return & Refunds</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Contact us</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Delivery</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Easy Paisa</span></div>
+            </div>
+            <div class="columns">
+                <p>CONTACT INFORMATION</p>
+                <div>
+                    <p>PHONE</p>
+                    <span>(021) 111 116 278</span>
+                </div>
+                <div>
+                    <p>EMAIL</p>
+                    <span>customer@hummart.com</span>
+                </div>
+                <div>
+                    <p>WORKING DAYS/HOURS</p>
+                    <span>Mon - Sun / 9:00AM - 9:00PM</span>
+                </div>
+            </div>
+            <div class="columns">
+                <p>MOBILE APPS</p>
+                <div class="footer-ImgDiv"><img src="Images/en_badge_web_generic.png" alt=""></div>
+                <!-- <div class="footer-ImgDiv"><img src="" alt=""></div> -->
+            </div>
+        </div>
+        <p>© Hummart.com 2020. All Rights Reserved
+            Powered By Matech CO</p>
+    </footer>
+</body>
+</html>

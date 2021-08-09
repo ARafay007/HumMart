@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="booking.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="topDiv">
+        <div class='topDiv_Content'>Groceries delivery in Karachi / Mobile phones, Cosmetics, Toys & Electronics nationwide</div>
+        <div class='topDiv_Divider'></div>
+        <div class='topDiv_Nav'>
+            <div class="topDiv_NavLogin">Login</div>
+            <div class="topDiv_NavCustCare">Customer Care</div>
+            <div class="topDiv_NavContact">
+                <ion-icon name="call-outline"></ion-icon> (021) 111 116 278 
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="searchSection">
+            <div class="searchSection_heading">Hum<span>Mart</span></div>
+            <div class="searchSection_inputs">
+                <input type="text" class='searchSection_search' placeholder="Search entire store here...">
+                <input type="button" class='btn btn-search' value="Search">
+            </div>
+            <div class="searchSection_Gif"><img src="Images/Toys_Gif.gif" alt="Toys Gif"></div>
+            <div class="searchSection_Cart">
+                <ion-icon name="cart-outline" class="openCart" size="large" style="color:rgb(12, 185, 12)"></ion-icon>
+                <span class='itemQty'>0</span>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-item">BEAUTY & PERSONAL CARE</div>
+            <div class="nav-item">HOUSEHOLD NEEDS</div>
+            <div class="nav-item">GROCERY & STAPLES</div>
+            <div class="nav-item">FURNISHING & HOME NEEDS</div>
+            <div class="nav-item">BABY KIDS & TOYS</div>
+            <div class="nav-item">PHARMACY</div>
+            <div class="nav-item">MORE</div>
+        </nav>
+
+        <!-- <div class="detailDiv">
+            <div class="detailDiv_Section"><img class='img' src="" alt=""></div>
+            <div class="detailDiv_Section detailDiv2">
+                <h3></h3>
+                <p class="pricePara"></p>
+                <p class="namePara"></p>
+                <p class="quantityPara">Quantity <span>1</span></p>
+                <input type="button" value="ADD TO CART" class="btn-addToCart">
+            </div>
+        </div> -->
+    </header>
+
+    <section class="section-blank_booking">
+        <div class="section-blank__Container">
+            <div class="section-blank_Container-leftDiv">
+                <div class="numberVerification">
+                    <div class="numberVerification-leftDiv">
+                        <span>1</span>
+                    </div>
+                    <div class="numberVerification-rightDiv">
+                        <span>Phone Number Verification</span>
+                        <p class="numberVerification-rightDiv-p1">We need your phone number so that we can update you about your order.</p>
+                        <p>Your 11 digit mobile number</p>
+                        <input type="text" class="numberVerification_Input" placeholder="03" name="" id="">
+                        <input type="button" class="numberVerification_btn" value='Next'>
+                    </div>
+                </div>
+                <div class="verificationDivs">
+                    <div class="verificationDiv-leftDiv">
+                        <span>2</span>
+                    </div>
+                    <div class="verification-rightDiv">Delivery Address</div>
+                </div>
+                <div class="verificationDivs">
+                    <div class="verificationDiv-leftDiv">
+                        <span>3</span>
+                    </div>
+                    <div class="verification-rightDiv">Delivery Date & Time</div>
+                </div>
+                <div class="verificationDivs">
+                    <div class="verificationDiv-leftDiv">
+                        <span>4</span>
+                    </div>
+                    <div class="verification-rightDiv">Payment</div>
+                </div>
+            </div>
+            <div class="section-blank_Container-rightDiv">
+                <div>
+                    <span>My Cart</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <div class="columns">
+                <p>HUMMART</p>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">About us</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Careers</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Sell on HumMart</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Terms & Conditions</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Privacy Policy</span></div>
+            </div>
+            <div class="columns">
+                <p>HELP</p>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">FAQs</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">How to Order</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">How to Pay</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Return & Refunds</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Contact us</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Delivery</span></div>
+                <div><ion-icon name="caret-forward-outline"></ion-icon><span class="hover">Easy Paisa</span></div>
+            </div>
+            <div class="columns">
+                <p>CONTACT INFORMATION</p>
+                <div>
+                    <p>PHONE</p>
+                    <span>(021) 111 116 278</span>
+                </div>
+                <div>
+                    <p>EMAIL</p>
+                    <span>customer@hummart.com</span>
+                </div>
+                <div>
+                    <p>WORKING DAYS/HOURS</p>
+                    <span>Mon - Sun / 9:00AM - 9:00PM</span>
+                </div>
+            </div>
+            <div class="columns">
+                <p>MOBILE APPS</p>
+                <div class="footer-ImgDiv"><img src="Images/en_badge_web_generic.png" alt=""></div>
+                <!-- <div class="footer-ImgDiv"><img src="" alt=""></div> -->
+            </div>
+        </div>
+        <p>© Hummart.com 2020. All Rights Reserved
+            Powered By Matech CO</p>
+    </footer>
+</body>
+</html>

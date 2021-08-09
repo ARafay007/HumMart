@@ -1,0 +1,721 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: calibri;
+}
+
+.topDiv {
+  width: 100%;
+  height: 60px;
+  background-color: #f1f1f1;
+}
+
+.topDiv_Content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60%;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+}
+
+.topDiv_Divider {
+  height: 6%;
+  width: 100%;
+  background-color: rgb(12, 185, 12);
+}
+
+.topDiv_Nav {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 34%;
+  width: 1140px;
+  margin: auto;
+  font-size: 14px;
+}
+
+.topDiv_Nav > div {
+  margin-left: 25px;
+}
+
+.topDiv_NavContact {
+  color: rgb(116, 117, 116);
+}
+
+/* =========================== topDiv css ends here =========================== */
+
+header {
+  padding-top: 30px;
+  width: 1140px;
+  margin: auto;
+}
+
+.searchSection {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.searchSection_heading {
+  flex-grow: 1;
+  /* background-color: rosybrown; */
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.searchSection_heading > span {
+  color: rgb(12, 185, 12);
+}
+
+.searchSection_inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 8;
+  /* background-color: saddlebrown; */
+}
+
+.searchSection_search {
+  background-color: #f1f1f1;
+  height: 70%;
+  width: 70%;
+  font-size: 15px;
+  outline: none;
+  border: 0;
+  padding-left: 10px;
+  border-radius: 7px 0 0 7px;
+}
+
+.btn-search {
+  background-color: rgb(12, 185, 12);
+  color: white;
+  /* font-weight: 700; */
+  font-size: 17px;
+  height: 70%;
+  border: 0;
+  padding: 0 20px;
+}
+
+.searchSection_Gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  /* background-color: salmon; */
+}
+
+.searchSection_Cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  /* background-color: slategray; */
+}
+
+/* =========================== header search section css ends here =========================== */
+
+nav{
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  background-color: rgb(12, 185, 12);
+  height: 40px;
+  margin-top:20px;
+  width:100%;
+}
+
+nav > div:first-child{
+  margin-left:20px;
+}
+
+nav > div{
+  color:white;
+  margin-right: 20px;
+  font-size:15px;
+  cursor: pointer;
+}
+
+/* =========================== header nav css ends here =========================== */
+
+.nav2{
+  z-index: 5;
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  background-color: rgb(12, 185, 12);
+  height: 40px;
+  margin-top:20px;
+  width:100%;
+  position:sticky;
+  top:0;
+  transition: all 0.5s;
+}
+
+.nav2-active{
+  display: none;
+  transition: display 0.5S;
+}
+
+/* =========================== header nav2 css ends here =========================== */
+
+.header-ImgGrid{
+  display:flex;
+  flex-direction:row;
+  margin-top:10px;
+}
+
+/* =========================== header Img grid css ends here =========================== */
+
+.Section-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width:100%;
+  height:140px;
+  background-color: #f1f1f1;
+}
+
+.Section-info > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Section-info > div:first-child{
+  border-right:1px solid white;
+}
+
+.Section-info > div:last-child{
+  border-left:1px solid white;
+}
+
+.Section-info > div > p:first-child{
+  font-weight: 900;
+}
+
+.Section-info > div > p:last-child{
+  width:70%;
+  color:#817f7f;
+}
+
+/* =========================== Section-info css ends here =========================== */
+
+.Section-bundleOffer{
+  background-color:#f1f1f1;
+  height:400px;
+  margin-top:60px;
+  padding-top:40px;
+}
+
+.bundleOffer-container{
+  width:1140px;
+  height:100%;
+  margin:auto;
+}
+
+.bundleOffer-container > p{
+  font-weight:900;
+  font-size:20px;
+  padding-bottom:10px;
+  border-bottom:1px solid rgb(218, 218, 218);
+  margin-bottom:20px;
+}
+
+.offer-container{
+  display: flex;
+  flex-direction: row;
+  height:80%;
+  width:100%;
+  /* background-color: seagreen; */
+}
+
+.offer-item{
+  width: calc(100%/5);
+  height:100%; 
+  /* background-color:silver; */
+  margin-right:10px;
+}
+
+.offer-imgDiv{
+  height:70%;
+  width:100%;
+}
+
+.offer-imgDiv > img{
+  width:100%;
+  height:100%;
+}
+
+.offer-item > p,
+.btnDiv > strike{
+  color:rgb(134, 134, 134);
+  font-size:17px;
+}
+
+.offer-item > p{
+  margin-bottom:7px;
+}
+
+.btnDiv > strike{
+  font-weight:500;
+  display: block;
+}
+
+.btnDiv > span{
+  font-weight:600;
+  font-size:18px;
+  margin-right:20px;
+}
+
+.btnDiv > a{
+  background-color: rgb(12, 185, 12);
+  color:white;
+  border-radius:50px;
+  padding:6px 10px;
+  border:0;
+  transition: background-color 0.3s;
+  text-decoration:none;
+}
+
+.btnDiv > a:hover{
+  background-color: rgb(4, 143, 4);
+}
+
+/* =========================== Section-bundleOffer css ends here =========================== */
+
+.Section-categoris{
+  width: 100%;
+  height:auto;
+  background-color: #f1f1f1;
+  margin-top: 20px;
+  padding-bottom:10px;
+}
+
+.Section-categoris > div{
+  width:1140px;
+  height:100%;
+  margin: auto;
+}
+
+.Section-categoris > div > p{
+  margin:20px 5px;
+  padding-top: 20px;
+  font-size:18px;
+}
+
+.category-container{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  margin-bottom:10px;
+}
+
+.category-item{
+  display: flex;
+  flex-direction:row;
+  /* flex-grow:3; */
+  width:49%;
+  background-color: white;;
+  padding:0 10px;
+  cursor:pointer;
+}
+
+.category-Img{
+  height:100%;
+  width:30%;
+}
+
+.category-Img > img{
+  height:100%;
+  width:100%;
+}
+
+.category-content{
+  flex-grow:5;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.category-content,
+.category-icon{
+  display: flex;
+  /* justify-self: flex-end; */
+  align-items:center;
+}
+
+.category-icon{
+  font-size:20px;
+  font-weight:900;
+}
+
+/* =========================== Section-categoris css ends here =========================== */
+
+.Section-about{
+  width:100%;
+  height:auto;
+  padding:20px 0;
+  background-color: #f1f1f1;
+  margin-top:20px;
+}
+
+.Section-about > div{
+  width:1140px;
+  height:100%;
+  margin:auto;
+}
+
+.Section-about > div > p:first-child{
+  font-size:18px;
+  padding-bottom:15px;
+}
+
+.Section-about > div > p:last-child{
+  /* font-size:18px; */
+  color:#8f8d8d
+}
+
+/* =========================== Section-about css ends here =========================== */
+
+.section-blank{
+  width: 100%;
+  height:300px;
+  background-color: #f1f1f1;
+  margin-top:60px
+}
+
+.section-blank_booking{
+  width: 100%;
+  height:auto;
+  background-color: #f1f1f1;
+  margin-top:60px;
+  padding:10px 0;
+}
+
+.section-blank__Container{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:1140px;
+  height:auto;
+  margin:auto;
+  margin-top:20px;
+}
+
+.section-blank_Container-leftDiv{
+  box-shadow: 2px 3px 6px rgb(199, 199, 199);
+  width:55%;
+  height:auto;
+}
+
+.numberVerification{
+  display:flex;
+  width:100%;
+  height:auto;
+  background-color: white;
+  padding:40px 60px;
+}
+
+.numberVerification-leftDiv > span,
+.verificationDiv-leftDiv > span{
+  border:1px solid rgb(12, 185, 12);
+  color: rgb(12, 185, 12);
+  border-radius: 400%;
+  padding:5px 10px;
+}
+
+.numberVerification-rightDiv,
+.verification-rightDiv{
+  padding-left:20px;
+}
+
+.numberVerification-rightDiv > Span{
+  font-weight:900;
+}
+
+.numberVerification-rightDiv-p1{
+  margin:14px 0;
+  color:rgb(134, 134, 134);
+}
+
+.numberVerification_Input{
+  border:1px solid rgb(207, 205, 205);
+  height:35px;
+  padding-left:10px;
+  margin-top:20px;
+}
+
+.numberVerification_btn{
+  height:35px;
+  background-color: rgb(207, 205, 205);
+  border:0;
+  padding:0 25px;
+}
+
+.verificationDivs{
+  display: flex;
+  width:100%;
+  height:auto;
+  background-color: #f9f9f9;
+  padding:40px 60px;
+  border-top:1px solid #dad8d8;
+}
+
+.section-blank_Container-rightDiv{
+  display:flex;
+  flex-direction: column;
+  width:40%;
+  border-left:1px solid rgb(207, 205, 205);
+  border-right:1px solid rgb(207, 205, 205);
+}
+
+.section-blank_Container-rightDiv > div{
+  border-bottom:1px solid rgb(129, 129, 129);
+}
+
+/* =========================== Section-blank css ends here =========================== */
+
+footer{
+  background-color: rgb(27,27,27);
+  width:100%;
+  height:auto;
+  padding-top:50px;
+  padding-bottom:20px;
+}
+
+footer > div{
+  width:1140px;
+  margin:auto;
+  height:auto;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  color:white;
+  padding-bottom:40px;
+  border-bottom:1px solid rgb(129, 129, 129);
+}
+
+footer > p{
+  width:1140px;
+  margin:auto;
+  padding-top:30px;
+  color:rgb(129, 129, 129);
+}
+
+.columns > p {
+  font-size:18px;
+  font-weight:500;
+  margin-bottom:20px;
+}
+
+.columns > div{
+  font-size: 15px;
+}
+
+.columns > div > span{
+  color:rgb(129, 129, 129);
+  display:inline-block;
+  border-bottom:1px solid transparent;
+}
+
+.hover:hover{
+  cursor: pointer;
+  border-bottom:1px solid rgb(129, 129, 129);
+  transition: border-bottom 0.4s;  
+}
+
+.footer-ImgDiv{
+  /* background-color: azure; */
+  margin-bottom:20px;
+  height:50px;
+}
+
+.footer-ImgDiv > img{
+  width:100%;
+  height:100%;
+}
+
+/* =========================== Footer css ends here =========================== */
+
+.detailDiv{
+  display:flex;
+  width:100%;
+  height:auto;
+  justify-content: center;
+}
+
+.detailDiv_Section{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content:center;
+  width: 50%;
+  height:auto;
+}
+
+.detailDiv_Section > img{
+  width:100%;
+  height:100%;
+}
+
+.detailDiv_Section > p {
+  margin:20px 0;
+}
+
+.pricePara{
+  color:rgb(12, 185, 12);
+  font-size:35px;
+}
+
+.namePara,
+.quantityPara{
+  font-size:18px;
+  color:rgb(121, 121, 121)
+}
+
+.quantityPara > span{
+  color:rgb(27,27,27);
+}
+
+.btn-addToCart{
+  border:0;
+  background-color: rgb(4, 143, 4);
+  color:white;
+  font-size:16px;
+  font-weight:500;
+  padding:7px 0;
+  width:200px;
+}
+
+/* =========================== detail css ends here =========================== */
+
+.cart{
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  position:fixed;
+  top:0;
+  right:0;
+  width:30%;
+  height:100vh;
+  background-color: #f0f0f0;
+  box-shadow: -2px 0px 10px rgba(37,37,37,0.5);
+  z-index:100;
+}
+
+.cardTopDiv{
+  overflow-y: scroll;
+  flex-grow:8;
+}
+
+.cart_QtyDiv{
+  background-color: rgb(12, 185, 12);
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  padding:15px 25px;
+  font-size:18px;
+  font-weight: 100;
+}
+
+.cart_chargesDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:15px 25px;
+  background-color: white;;
+}
+
+.cart-itemInfo{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  margin:5px 0;
+}
+
+.cart-itemInfo-p3 > span{
+  background-color:red;
+  color:white;
+  border-radius: 400px;
+  padding:1px 8px;
+}
+
+.increaseQty,
+.decreaseQty{
+  cursor:pointer;
+}
+
+.cart-itemInfo-img{
+  width:20%;
+}
+
+.cart-itemInfo-detail{
+  width:60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.cart-itemInfo-price{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+}
+
+.RemoveItem{
+  color:red;
+  background-color: transparent;
+  border:0;
+  border:1px solid transparent;
+  margin-bottom:20px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.RemoveItem:hover{
+  border:1px solid rgb(199, 199, 199);
+  transition: border-bottom 0.4s;
+}
+
+.cart-Img{
+  height:100%;
+  width:100%;
+}
+
+.cardBottomDiv{
+  padding:10px;
+}
+
+.btn-cart{
+  width:100%;
+  display:inline-block;
+  text-decoration: none;
+  text-align:center;
+  padding:10px 0;
+  color:white;
+  font-size:18px;
+  background-color: rgb(12, 185, 12);
+  border:0;
+  border-radius: 5px;
+}
+
+.hideCart{
+  display: none;
+}
+
+.crossBtn,
+.openCart{
+  cursor:pointer;
+}
+
+.test{
+  background-color: brown;
+  height:100vh;
+}

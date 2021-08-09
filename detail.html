@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    
+    <script defer src="detail.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topDiv">
+        <div class='topDiv_Content'>Groceries delivery in Karachi / Mobile phones, Cosmetics, Toys & Electronics nationwide</div>
+        <div class='topDiv_Divider'></div>
+        <div class='topDiv_Nav'>
+            <div class="topDiv_NavLogin">Login</div>
+            <div class="topDiv_NavCustCare">Customer Care</div>
+            <div class="topDiv_NavContact">
+                <ion-icon name="call-outline"></ion-icon> (021) 111 116 278 
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="searchSection">
+            <div class="searchSection_heading">Hum<span>Mart</span></div>
+            <div class="searchSection_inputs">
+                <input type="text" class='searchSection_search' placeholder="Search entire store here...">
+                <input type="button" class='btn btn-search' value="Search">
+            </div>
+            <div class="searchSection_Gif"><img src="Images/Toys_Gif.gif" alt="Toys Gif"></div>
+            <div class="searchSection_Cart">
+                <ion-icon name="cart-outline" class="openCart" size="large" style="color:rgb(12, 185, 12)"></ion-icon>
+                <span class='itemQty'>0</span>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-item">BEAUTY & PERSONAL CARE</div>
+            <div class="nav-item">HOUSEHOLD NEEDS</div>
+            <div class="nav-item">GROCERY & STAPLES</div>
+            <div class="nav-item">FURNISHING & HOME NEEDS</div>
+            <div class="nav-item">BABY KIDS & TOYS</div>
+            <div class="nav-item">PHARMACY</div>
+            <div class="nav-item">MORE</div>
+        </nav>
+
+        <div class="detailDiv">
+            <div class="detailDiv_Section"><img class='img' src="" alt=""></div>
+            <div class="detailDiv_Section detailDiv2">
+                <h3></h3>
+                <p class="pricePara"></p>
+                <p class="namePara"></p>
+                <p class="quantityPara">Quantity <span>1</span></p>
+                <input type="button" value="ADD TO CART" class="btn-addToCart">
+            </div>
+        </div>
+    </header>
+
+    <div class="cart hideCart">
+        <div class="cart_QtyDiv">My Cart <span class='itemQty'></span> <span class="crossBtn">&#x274c;</span></div>
+        <div class="cardTopDiv">
+            <div class="cart_chargesDiv">
+                <span>Subtotal</span><span class='priceSpan'></span>
+            </div>
+        </div>
+        <div class="cardBottomDiv">
+            <a href="booking.html" class='btn-cart'>Proceed To Checkout</a>
+        </div>
+    </div>
+</body>
+</html>
