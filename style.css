@@ -474,6 +474,11 @@ nav > div{
   border-right:1px solid rgb(207, 205, 205);
 }
 
+.section-blank_Container-rightDiv > div:first-child{
+  display: flex;
+  justify-content: space-between;
+}
+
 .section-blank_Container-rightDiv > div{
   border-bottom:1px solid rgb(129, 129, 129);
 }

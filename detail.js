@@ -38,7 +38,7 @@ let toggleCart = false;
                     <p class="cart-itemInfo-p2">${el.name}</p>
                     <p class="cart-itemInfo-p3">
                     <span class='increaseQty'>+</span> 
-                    <span class='qty'>1</span> 
+                    <span class='qty'>${el.qty}</span> 
                     <span class='decreaseQty'>-</span>
                     </p>
                 </div>
@@ -71,7 +71,7 @@ const createDynamicItems = function(list){
                     <p class="cart-itemInfo-p2">${el.name}</p>
                     <p class="cart-itemInfo-p3">
                     <span class='increaseQty'>+</span> 
-                    <span class='qty'>1</span> 
+                    <span class='qty'>${el.qty}</span> 
                     <span class='decreaseQty'>-</span>
                     </p>
                 </div>
@@ -93,7 +93,6 @@ itemName.textContent = detailObj.name;
 price.textContent = detailObj.price;
 bundleName.textContent = detailObj.bundleName;
 img.src = detailObj.img;
-// console.log(cartItemQuantity.textContent);
 
 const cartToggle = function(){
     toggleCart ? cart.classList.add('hideCart') : cart.classList.remove('hideCart');
@@ -160,7 +159,7 @@ cartTopDiv.addEventListener('click', function(e){
     else if(e.target.classList.contains('RemoveItem')){
         console.log(e.target.dataset.key);
         bookedItemObj.splice(Number(e.target.dataset.key) - 1, 1);
-        localStorage.itemList = bookedItemObj;
+        localStorage.itemList = JSON.stringify(bookedItemObj);
         console.log(bookedItemObj);
 
         const removeDiv = document.querySelectorAll('.cart-itemInfo');
