@@ -1,12 +1,15 @@
 'use strict'
 
-const detailObj = JSON.parse(localStorage.item);
-const bookedItemObj = localStorage.itemList === undefined ? [] : JSON.parse(localStorage.itemList);
+let detailObj = JSON.parse(localStorage.item);
+let bookedItemObj = localStorage.itemList === undefined ? [] : JSON.parse(localStorage.itemList);
+const searchableItems = JSON.parse(localStorage.searchableItems);
 
 const itemName = document.querySelector('.namePara');
 const price = document.querySelector('.pricePara');
 const bundleName = document.querySelector('h3');
 const img = document.querySelector('.img');
+const searchBox = document.querySelector('.searchSection_search');
+const searchArea = document.querySelector('.searchArea');
 
 let finalPrice = document.querySelector('.priceSpan');
 const cart = document.querySelector('.cart');
@@ -20,16 +23,25 @@ let toggleCart = false;
 //Immediate invoked function expression IIFE
 (function(){
     console.log(localStorage.itemList);
-    if(localStorage.itemList != undefined || localStorage.itemList != [])
+    loadItemToBeSelected();
+    loadSelectedItems();
+})();
+
+function loadSelectedItems(){
+    if(localStorage.itemList != undefined && localStorage.itemList != [])
     {
-        finalPrice.textContent = '';
+        finalPrice.textContent = 'Rs 0';
         const list = JSON.parse(localStorage.itemList);
-        let totalPrice = 0, totalItems = 0;
+        bookedItemObj = JSON.parse(localStorage.itemList);
+        let totalItems = 0, totalPrice = 0;
 
         list.forEach((el, i) => 
         {
+            let itemTotalPrice = 0;
+            // console.log(el);
             totalItems++;
-            totalPrice += Number(el.price);
+            itemTotalPrice += Number(el.price) * el.qty;
+            totalPrice += itemTotalPrice;
             document.querySelector('.cart_chargesDiv').insertAdjacentHTML('afterend', 
             `<div class="cart-itemInfo">
                 <div class="cart-itemInfo-img"><img class='cart-Img' src="${el.img}" alt=""></div>
@@ -40,6 +52,7 @@ let toggleCart = false;
                     <span class='increaseQty'>+</span> 
                     <span class='qty'>${el.qty}</span> 
                     <span class='decreaseQty'>-</span>
+                    Stock <span class='reamining'>${el.remaining}</span>
                     </p>
                 </div>
                 <div class="cart-itemInfo-price">
@@ -52,7 +65,7 @@ let toggleCart = false;
         finalPrice.textContent = `Rs ${totalPrice}`;
         itemsQty.forEach(el => el.textContent = `${totalItems} item(s)`);
     }
-})();
+};
 
 const createDynamicItems = function(list){
         finalPrice.textContent = '';
@@ -71,7 +84,7 @@ const createDynamicItems = function(list){
                     <p class="cart-itemInfo-p2">${el.name}</p>
                     <p class="cart-itemInfo-p3">
                     <span class='increaseQty'>+</span> 
-                    <span class='qty'>${el.qty}</span> 
+                    <span class='qty'>1</span> 
                     <span class='decreaseQty'>-</span>
                     </p>
                 </div>
@@ -88,12 +101,13 @@ const createDynamicItems = function(list){
 
 
 // console.log(detailObj);
-console.log(bookedItemObj);
-itemName.textContent = detailObj.name;
-price.textContent = detailObj.price;
-bundleName.textContent = detailObj.bundleName;
-img.src = detailObj.img;
-
+// console.log(bookedItemObj);
+function loadItemToBeSelected(){
+    itemName.textContent = detailObj.name;
+    price.textContent = detailObj.price;
+    bundleName.textContent = detailObj.bundleName;
+    img.src = detailObj.img;
+}
 const cartToggle = function(){
     toggleCart ? cart.classList.add('hideCart') : cart.classList.remove('hideCart');
     toggleCart = !toggleCart;
@@ -104,6 +118,25 @@ document.querySelector('.openCart').addEventListener('click', cartToggle)
 
 addToCartBtn.addEventListener('click', function(){
     console.log(localStorage.itemList);
+
+    bookedItemObj.forEach(el => {
+        if(el.name === detailObj.name){
+            el.qty++;
+            el.remaining--;
+            detailObj = {};
+            console.log(detailObj);
+            localStorage.itemList = JSON.stringify(bookedItemObj);
+
+            const clear_cartItemInfoDiv = document.querySelectorAll('.cart-itemInfo');
+            clear_cartItemInfoDiv.forEach(div => div.remove());
+
+            loadSelectedItems();
+        }
+    });
+
+    if(Object.keys(detailObj).length === 0 && detailObj.constructor === Object)
+        return;
+    
     bookedItemObj.push(detailObj);
     console.log(bookedItemObj);    
     localStorage.itemList = JSON.stringify(bookedItemObj);
@@ -128,8 +161,9 @@ addToCartBtn.addEventListener('click', function(){
             <p class="cart-itemInfo-p2">${detailObj.name}</p>
             <p class="cart-itemInfo-p3">
                 <span class='increaseQty'>+</span> 
-                <span class='qty'>1</span> 
+                <span class='qty'>${detailObj.qty}</span> 
                 <span class='decreaseQty'>-</span>
+                Stock <span class='reamining'>${detailObj.remaining}</span>
             </p>
         </div>
         <div class="cart-itemInfo-price">
@@ -148,13 +182,61 @@ cartTopDiv.addEventListener('click', function(e){
     
     if(e.target.classList.contains('increaseQty')){ 
         countQty = Number(e.target.nextElementSibling.textContent);
+
+        if(countQty === 10){
+            alert('No more stock available');
+            return;
+        }
+
         countQty++;
         e.target.nextElementSibling.textContent = countQty;
+        
+        const itemName = e.target.closest('.cart-itemInfo-detail').children[1].textContent;
+
+        console.log(bookedItemObj);
+
+        bookedItemObj.filter(el => {
+            if(el.name === itemName){
+                el.qty = countQty;
+                el.remaining -= 1;
+                e.target.closest('.cart-itemInfo-p3').children[3].textContent = el.remaining;
+            }
+        });
+
+        localStorage.itemList = JSON.stringify(bookedItemObj);
+
+        const clear_cartItemInfoDiv = document.querySelectorAll('.cart-itemInfo');
+        clear_cartItemInfoDiv.forEach(div => div.remove());
+
+        loadSelectedItems();
     }
     else if(e.target.classList.contains('decreaseQty')) {
         countQty = Number(e.target.previousElementSibling.textContent);
+
+        if(countQty === 1){
+            alert('Item quantity should be atleast 1');
+            return;
+        }
+
         countQty = countQty == 1 ? 1 : --countQty;
         e.target.previousElementSibling.textContent = countQty;
+
+        const itemName = e.target.closest('.cart-itemInfo-detail').children[1].textContent;
+
+        bookedItemObj.filter(el => {
+            if(el.name === itemName){
+                el.qty = countQty;
+                el.remaining += 1;
+                e.target.closest('.cart-itemInfo-p3').children[3].textContent = el.remaining;
+            }
+        });
+
+        localStorage.itemList = JSON.stringify(bookedItemObj);
+
+        const clear_cartItemInfoDiv = document.querySelectorAll('.cart-itemInfo');
+        clear_cartItemInfoDiv.forEach(div => div.remove());
+
+        loadSelectedItems();
     }
     else if(e.target.classList.contains('RemoveItem')){
         console.log(e.target.dataset.key);
@@ -167,4 +249,41 @@ cartTopDiv.addEventListener('click', function(e){
 
         createDynamicItems(bookedItemObj);
     }
+});
+
+//Search Area
+searchBox.addEventListener('keyup', function(){
+    if(searchBox.value === '' || searchBox.value === null){
+        while(searchArea.firstElementChild){
+            searchArea.removeChild(searchArea.firstElementChild);
+        }
+
+        searchArea.classList.add('hideSearchArea');
+    }
+    else{
+        searchArea.classList.remove('hideSearchArea');
+
+        // bookedItemObj.forEach(el => {el.name.toLowerCase().split(" ").forEach(el => {console.log(el)})});
+
+        searchableItems.forEach(item => {
+            item.name.toLowerCase().split(" ")
+                   .forEach(name => { 
+                    if(name === searchBox.value.toLowerCase()){
+                        searchArea.insertAdjacentHTML('beforeend', `<li>${item.name}</li>`);
+                        // console.log(el.name);
+                    } })
+        });
+    }
+});
+
+searchArea.addEventListener('click', function(e){
+    console.log(e.target);
+
+    searchableItems.forEach(el => {
+        if(el.name === e.target.textContent){
+            detailObj = el;
+            console.log(el);
+            loadItemToBeSelected();
+        }
+    })
 });

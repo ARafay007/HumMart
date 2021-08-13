@@ -118,6 +118,17 @@ header {
   /* background-color: slategray; */
 }
 
+.searchArea{
+  margin:auto;
+  border:1px solid black;
+  list-style-type: none;
+  width:50%;
+}
+
+.hideSearchArea{
+  display: none;
+}
+
 /* =========================== header search section css ends here =========================== */
 
 nav{
@@ -483,6 +494,14 @@ nav > div{
   border-bottom:1px solid rgb(129, 129, 129);
 }
 
+.section-blank_Container-rightDiv > button {
+  border:0;
+  background-color: rgb(12, 185, 12);
+  font-size:18px;
+  color:white;
+  padding:10px;
+}
+
 /* =========================== Section-blank css ends here =========================== */
 
 footer{
@@ -670,8 +689,8 @@ footer > p{
 .cart-itemInfo-price{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: space-between;
+  justify-content: space-around;
+  /* align-items: space-between; */
 }
 
 .RemoveItem{
@@ -723,4 +742,73 @@ footer > p{
 .test{
   background-color: brown;
   height:100vh;
+}
+
+/* =========================== Cart css ends here =========================== */
+
+.modal{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:fixed;
+  top:0;
+  z-index: 100;
+  width:100%;
+  height:100vh;
+  background-color: rgba(102, 100, 100, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.hideModal{
+  display: none;
+}
+
+.modal-UserInfo{
+  display: flex;
+  flex-direction:column;
+  /* justify-content: center; */
+  background-color: white;
+  width:400px;
+  height:400px;
+  padding: 20px;
+  padding-bottom: 0px;
+  border-radius: 10px;
+}
+
+.modal-UserInfo > div:first-child{
+  text-align: right;
+}
+
+.modal-UserInfo > div:first-child > button{
+  font-size: 20px;
+  font-weight: 900;
+  color:red;
+  padding:0 5px;
+}
+
+.modal-UserInfo-div{
+  /* border:1px solid black; */
+  height:80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-UserInfo-div > input {
+  height:25px;
+  margin-bottom:20px;
+  border:0;
+  border-bottom:1px solid rgb(189, 187, 187);
+  outline:none;
+}
+
+.modal-UserInfo > div:last-child > button{
+  width:100%;
+  font-size:20px;
+  border:0;
+  padding: 5px;
+}
+
+.modal-UserInfo > div:last-child > button:hover{
+  background-color: rgb(138, 138, 138);
 }
